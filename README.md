@@ -1,7 +1,7 @@
 # Sales Prediction
 
 ## Description
-This project was created to predict purchases in the online store and  it consist two main file `Classifier.py` and `model.pkl`. The first one is Python script that prepare data sets t=in format that is good for machine learning algorithms. The second one is pre-trained machine learning model that was trained on data sets with absolutely same structure.
+This project was created to predict purchases in the online store and  it consist three main file `Classifier.py`, `Trainer.py` and `model.pkl`. The first one is Python script that prepare data sets t=in format that is good for machine learning algorithms. The second one used to train algoritm for predecting and generate `model.pkl`. The third one is pre-trained machine learning model that was trained on data sets with absolutely same structure.
 
 ## Data Praparation
 Here is all steps for data preparation:
@@ -49,11 +49,15 @@ For this task was used Desicion Tree from Scikit-Learn that return 71,44% of acc
 * Scikit-Learn
 
 ## Usage
-To install all requirements and run `Classifier.py` type the following command
+To install all requirements, generate `model.pkl` via `Trainer.py` and run `Classifier.py` type the following command
 ```
 pip install -r requirements.txt
 ```
 
 ```
-python Classifier.py -f filename.csv
+python Trainer.py -f train.py
+```
+
+```
+python Classifier.py -f test.csv
 ```
